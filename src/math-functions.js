@@ -79,9 +79,10 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    const skipSumFunction = eval(sumArr.join('+'));
+    const results = sum(sumArr[0], ((eval(sumArr.join('+'))) - sumArr[0]));
     const message = sumArr.join(',');
-    return [skipSumFunction, `${message} was passed in as an array of numbers, and ${skipSumFunction} is their sum.`];
+    
+    return [results[0], `${message} was passed in as an array of numbers, and ${results[0]} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -104,7 +105,9 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const results = multiply(multArr[0], ((eval(multArr.join('*'))) / multArr[0]));
+    const message = multArr.join(',');
+    return [results[0], `The numbers ${message} have a product of ${results[0]}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -128,7 +131,9 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    const results = multiply(dynamicArray[0], ((eval(dynamicArray.join('*'))) / dynamicArray[0]));
+    const message = dynamicArray.join(',');
+    return [results[0], `The numbers ${message} have a product of ${results[0]}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
