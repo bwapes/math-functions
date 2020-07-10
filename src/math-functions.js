@@ -12,7 +12,8 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
-    return [(a + b), 'The sum of 4 and 7 is 11.'];
+    const sumVar = a + b;
+    return [sumVar, `The sum of ${a} and ${b} is ${sumVar}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -28,7 +29,8 @@ uses the values that were input into the function:
 */
 
 export function multiply(a, b) {
-    return [(a * b), 'The product of 5 and 9 is 45.'];
+    const mutliplyVar = a * b;
+    return [mutliplyVar, `The product of ${a} and ${b} is ${mutliplyVar}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -55,7 +57,7 @@ how to do this. However, you may continue to use the + operator for string conca
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const sumFunction = sum(a, b + c);
     const multiplyFunction = multiply(a, b * c);
-    return [sumFunction[0], multiplyFunction[0], '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.']
+    return [sumFunction[0], multiplyFunction[0], `${a} and ${b} and ${c} sum to ${sumFunction[0]}.`, `The product of ${a} and ${b} and ${c} is ${multiplyFunction[0]}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -77,7 +79,9 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const skipSumFunction = eval(sumArr.join('+'));
+    const message = sumArr.join(',');
+    return [skipSumFunction, `${message} was passed in as an array of numbers, and ${skipSumFunction} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -111,7 +115,10 @@ export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any
+length as its argument and returns an array whose 
+first element is the product of those numbers, and the second element is a string that 
+EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
