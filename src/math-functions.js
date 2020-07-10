@@ -131,9 +131,6 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-    const results = multiply(dynamicArray[0], ((eval(dynamicArray.join('*'))) / dynamicArray[0]));
-    const message = dynamicArray.join(',');
-    return [results[0], `The numbers ${message} have a product of ${results[0]}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
