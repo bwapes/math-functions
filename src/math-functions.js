@@ -135,6 +135,7 @@ export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     const message = dynamicArray.join(',');
     return [results[0], `The numbers ${message} have a product of ${results[0]}.`];
 }
-
+ 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+  
